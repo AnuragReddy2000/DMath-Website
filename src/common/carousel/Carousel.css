@@ -1,0 +1,35 @@
+@media screen and (max-width: 450px){
+    .carousel{
+        background-color: transparent;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        height: 30vh;
+        overflow-y: hidden;
+    }
+}
+
+@media screen and (min-width: 451px) and (max-width: 800px){
+    .carousel{
+        background-color: transparent;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        height: 50vh;
+        overflow-y: hidden;
+    }
+}
+
+@media screen and (min-width: 801px){
+    .carousel{
+        background-color: transparent;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        max-height: 60vh;
+        overflow-y: hidden;
+    }
+}

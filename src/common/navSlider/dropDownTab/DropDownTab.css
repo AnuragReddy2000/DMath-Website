@@ -1,0 +1,30 @@
+.dropDownTab{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    justify-content: start;
+    margin-bottom: 2px;
+    box-sizing: border-box;
+}
+
+.closedTitle{
+    width:100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    box-sizing: border-box;
+    padding-right: 3px;
+    align-items: center;
+}
+
+.openTitle{
+    width:100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    box-sizing: border-box;
+    padding-right: 3px;
+    align-items: center;
+    border-bottom: 1px solid rgb(236, 236, 236);
+    margin-bottom: 2px;
+}

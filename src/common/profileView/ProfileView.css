@@ -1,0 +1,68 @@
+@media screen and (min-width: 361px){
+    .image{
+        width: 140px;
+        margin-left: 0.7vw;
+    }    
+
+    .profileView{
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: start;
+        align-items: center;
+        text-align: left;
+        background-color: rgb(250,250,250);
+        padding: 3px;
+        margin-top: 2px;
+        margin-bottom: 2vh;
+        box-sizing: border-box;
+    }    
+}
+
+@media screen and (max-width: 360px){
+    .image{
+        width: 180px;
+        margin-left: 2vw;
+        margin-top: 1vh;
+    }
+    
+    .profileView{
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+        align-items: flex-start;
+        text-align: left;
+        background-color: rgb(250,250,250);
+        padding: 3px;
+        box-sizing: border-box;
+        margin-bottom: 2vh;
+    }   
+    .imageWrap{
+        align-self: center;
+    } 
+}
+
+.name{
+    text-align: left;
+    margin-top: 3px;
+    margin-bottom: 2px;
+    font-size: 1.1em;
+    color: darkblue;
+}
+
+.designation{
+    text-align: left;
+    margin-top: 3px;
+    margin-bottom: 2px;
+    font-size: 0.9em;
+}
+
+.extras{
+    text-align: left;
+    margin-top: 3px;
+    margin-bottom: 2px;
+    font-size: 0.8em;
+}
