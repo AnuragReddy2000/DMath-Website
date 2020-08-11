@@ -5,8 +5,8 @@ import {GiBookshelf} from 'react-icons/gi';
 import {BsPeople} from 'react-icons/bs';
 import {BsNewspaper} from 'react-icons/bs';
 import {GiSpellBook} from 'react-icons/gi';
-import {IoIosLink} from 'react-icons/io';
 import {AiOutlineUserAdd} from 'react-icons/ai';
+import {MdEventNote} from 'react-icons/md';
 
 export const IconsList: Record<string, IconType> = {
     'Home': AiOutlineHome,
@@ -16,5 +16,5 @@ export const IconsList: Record<string, IconType> = {
     'News & Events': BsNewspaper,
     'Admissions': AiOutlineUsergroupAdd,
     'Recruitments': AiOutlineUserAdd,
-    'Quick Links': IoIosLink
+    'TimeTables': MdEventNote
 }

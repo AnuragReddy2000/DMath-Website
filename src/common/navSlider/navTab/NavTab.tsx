@@ -2,11 +2,13 @@ import React from 'react';
 import './NavTab.css';
 import {BsDot} from 'react-icons/bs';
 import {IconsList} from '../../../models/IconsList';
+import {Link} from 'react-router-dom';
 
 interface NavTabProp{
     onClickEvent: (tab: string) => void;
     name: string;
     currentTab: string
+    urlLink?: string
 }
 
 interface NavTabState{}
@@ -23,10 +25,12 @@ class NavTab extends React.Component<NavTabProp,NavTabState>{
     render(){
         var Icon = IconsList[this.props.name];
         return(
-            <div className={((this.props.currentTab==this.props.name) ? 'active':'inactive') + 'NavTab'} onClick={this.onClick}>
-                {(IconsList[this.props.name]==undefined)? <BsDot/> : <Icon/>}
-                <p>{this.props.name}</p>
-            </div>
+            <Link to={this.props.urlLink ? this.props.urlLink : '/'} className={this.props.urlLink ? 'active-link' : 'disabled-link'} style={{textDecoration: 'none', color: 'inherit'}}>
+                <div className={((this.props.currentTab==this.props.name) ? 'active':'inactive') + 'NavTab'} onClick={this.onClick}>
+                    {(IconsList[this.props.name]==undefined)? <BsDot/> : <Icon/>}
+                    <p className='navTabName'>{this.props.name}</p>
+                </div>
+            </Link>
         )
     }
 }

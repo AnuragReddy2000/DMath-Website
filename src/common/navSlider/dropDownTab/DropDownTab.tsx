@@ -3,6 +3,7 @@ import NavTab from '../navTab/NavTab';
 import './DropDownTab.css';
 import {RiArrowDropDownLine} from 'react-icons/ri';
 import {RiArrowDropUpLine} from 'react-icons/ri';
+import {RouteMapModel} from '../../../models/RouteMapModel';
 
 interface DropDownTabState{}
 
@@ -36,7 +37,7 @@ class DropDownTab extends React.Component<DropDownTabProp,DropDownTabState>{
                     <NavTab name={this.props.name} currentTab={this.props.currentTab} onClickEvent={this.onDropDownClick}></NavTab>
                     {(this.props.currentDropdown == this.props.name) ? <RiArrowDropUpLine size={28} color='darkblue'/> : <RiArrowDropDownLine size={28} color='darkblue'/>}
                 </div>
-                {(this.props.currentDropdown == this.props.name) ? this.props.contentTabs.map(tab => <NavTab name={tab} currentTab={this.props.currentTab} onClickEvent={this.props.onClickEvent}/>) : null}
+                {(this.props.currentDropdown == this.props.name) ? this.props.contentTabs.map(tab => <NavTab name={tab} currentTab={this.props.currentTab} onClickEvent={this.props.onClickEvent} urlLink={RouteMapModel[tab]}/>) : null}
             </div>
         )
     }

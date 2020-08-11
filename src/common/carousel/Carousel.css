@@ -29,7 +29,7 @@
         flex-direction: row;
         align-items: center;
         justify-content: space-between;
-        max-height: 60vh;
+        height: 60vh;
         overflow-y: hidden;
     }
 }

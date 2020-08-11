@@ -1,5 +1,5 @@
 @media screen and (min-width: 361px){
-    .image{
+    .profileViewImage{
         width: 140px;
         margin-left: 0.7vw;
     }    
@@ -9,7 +9,7 @@
         height: 100%;
         display: flex;
         flex-direction: row;
-        justify-content: start;
+        justify-content: flex-start;
         align-items: center;
         text-align: left;
         background-color: rgb(250,250,250);
@@ -18,10 +18,13 @@
         margin-bottom: 2vh;
         box-sizing: border-box;
     }    
+    .profileViewImageWrap{
+        margin-right: 10px;
+    } 
 }
 
 @media screen and (max-width: 360px){
-    .image{
+    .profileViewImage{
         width: 180px;
         margin-left: 2vw;
         margin-top: 1vh;
@@ -40,12 +43,12 @@
         box-sizing: border-box;
         margin-bottom: 2vh;
     }   
-    .imageWrap{
+    .profileViewImageWrap{
         align-self: center;
     } 
 }
 
-.name{
+.profileViewName{
     text-align: left;
     margin-top: 3px;
     margin-bottom: 2px;
@@ -53,14 +56,14 @@
     color: darkblue;
 }
 
-.designation{
+.profileViewDesignation{
     text-align: left;
     margin-top: 3px;
     margin-bottom: 2px;
     font-size: 0.9em;
 }
 
-.extras{
+.profileViewExtras{
     text-align: left;
     margin-top: 3px;
     margin-bottom: 2px;

@@ -37,7 +37,7 @@ class NavSlider extends React.Component<NavSliderProps, NavSliderState>{
     render(){
         return(
             <div className={this.props.layoutMode + 'Slider'}>
-                <NavTab name='Home' onClickEvent={this.home} currentTab={this.props.currentTab}/>
+                <NavTab name='Home' onClickEvent={this.home} currentTab={this.props.currentTab} urlLink='/'/>
                 {DropDownList.map(value =>  <DropDownTab name={value.title} currentTab={this.props.currentTab} currentDropdown={this.state.currentDropDown} onClickEvent={this.props.changeTab} dropDownUpdate={this.changeDropDownTab} contentTabs={value.subTitles}/>)} 
                 <div className='contactUs'>
                     <p>Contact Us </p>

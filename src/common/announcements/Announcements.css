@@ -1,65 +1,69 @@
 @media screen and (min-width: 801px){
 
-    .announcementColumn{
-      display: flex;
-      flex-direction: column;
-      width: 18vw;
-      padding-right: 1vw;
-    }
+  .announcementColumn{
+    display: flex;
+    flex-direction: column;
+    width: 20vw;
+    border-right: 1px solid rgb(236, 236, 236);
+    box-shadow: -2px 0px 1px rgb(216, 216, 216);
+    background-color: rgb(250, 250, 250);
+    margin-right: 2px;
+  }
   
-    .announcements{
-      height: 42vh;
-      width: 100%;
-      background-color: rgb(250, 250, 250);
-      margin-top: 2vh;
-      margin-right: 10px;
-      border: 1px solid rgb(236, 236, 236);
-      display: flex;
-      flex-direction: column;
-      justify-content: start;
-      align-items: center;
-      box-sizing: border-box;
-      position: sticky;
-      position: -webkit-sticky;
-      top: 13vh;
-      text-align: left;
-    }
+  .announcements{
+    height: 42vh;
+    width: 100%;
+    background-color: rgb(250, 250, 250);
+    margin-top: 2vh;
+    margin-left: 3px;
+    margin-right: 3px;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    box-sizing: border-box;
+    position: sticky;
+    position: -webkit-sticky;
+    top: 13vh;
+    text-align: left;
+  }
   
-      .events{
-        height: 42vh;
-        width: 100%;
-        background-color: rgb(250, 250, 250);
-        margin-top: 2vh;
-        margin-right: 10px;
-        border: 1px solid rgb(236, 236, 236);
-        display: flex;
-        flex-direction: column;
-        justify-content: start;
-        align-items: center;
-        box-sizing: border-box;
-        position: sticky;
-        position: -webkit-sticky;
-        top: 57vh;
-        text-align: left;
-      }
+  .events{
+    height: 42vh;
+    width: 100%;
+    background-color: rgb(250, 250, 250);
+    margin-top: 2vh;
+    margin-right: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    box-sizing: border-box;
+    position: sticky;
+    position: -webkit-sticky;
+    top: 57vh;
+    text-align: left;
+  }
   
-      .announceList{
+    .announceList{
         font-size: small;
         align-self: start;
         margin-bottom: 3px;
-      }
+        margin-left: 3px;
+    }
   
       .announceTitle{
-        text-decoration: underline;
-        color: darkblue;
+        color: rgb(0, 0, 187);
         margin-top: 5px;
         margin-bottom: 4px;
         align-self: center;
+        font-size: large;
+        border-bottom: 1px solid rgb(197, 197, 197);
       }
-  }
+}
     
-  @media screen and (max-width: 800px){
-      .announcementColumn{
-        display: none;
-      }
+@media screen and (max-width: 800px){
+  .announcementColumn{
+    display: none;
   }
+}

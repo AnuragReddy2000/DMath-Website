@@ -2,7 +2,7 @@ import React from 'react';
 import Carousel from '../../common/carousel/Carousel';
 import InfoView from '../../common/infoView/InfoView';
 import {CarouselPics} from '../../models/CarouselPics';
-import AboutImg1 from '../../images/homePage/AboutImg1.png';
+import AboutImg11 from '../../images/homePage/AboutImg11.png';
 import AboutImg2 from '../../images/homePage/AboutImg2.png';
 import './HomePage.css';
 
@@ -20,10 +20,10 @@ class Homepage extends React.Component{
                     'In consonance with this philosophy, the department aims "to foster eclecticism and excellence in mathematical education and research which is well poised between abstraction and application."']}
                     />
                 </div>
-                <div className='infoContent'>
+                <div className='hpInfoContent'>
                     <InfoView 
                     title='Teaching Fulcrum' 
-                    image={AboutImg1} 
+                    image={AboutImg11} 
                     info={['As one of the basic science departments, the department remains as the fulcrum of teaching that offers many foundational math courses for the entire community of students at IIT Hyderabad.',
                     'The department further offers a minor in Mathematics for the undergrad students.',
                     'From the academic year 2017-18, the department has started to offer a new undergrad programme called the B.Tech (Math and Computing).',

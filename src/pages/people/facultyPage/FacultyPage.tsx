@@ -1,7 +1,7 @@
 import React from 'react';
-import InfoView from '../../common/infoView/InfoView';
-import {FacultyDataList} from '../../models/FacultyDataList';
-import ProfileView from '../../common/profileView/ProfileView';
+import InfoView from '../../../common/infoView/InfoView';
+import {FacultyDataList} from '../../../models/FacultyDataList';
+import ProfileView from '../../../common/profileView/ProfileView';
 import './FacultyPage.css'
 
 class FacultyPage extends React.Component{

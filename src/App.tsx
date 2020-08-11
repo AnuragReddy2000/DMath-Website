@@ -5,8 +5,12 @@ import NavSlider from './common/navSlider/NavSlider';
 import Announcements from './common/announcements/Announcements';
 import {Swipeable} from 'react-swipeable';
 import HomePage from './pages/homePage/HomePage';
-import FacultyPage from './pages/facultyPage/FacultyPage';
 import Marquee from './common/marquee/Marquee';
+import StaffPage from './pages/people/staffPage/StaffPage';
+import BtechMnCPage from './pages/academics/btechMnCPage/BtechMnCPage';
+import FacultyPage from './pages/people/facultyPage/FacultyPage';
+import { Route, Switch } from 'react-router-dom';
+import SeminarPage from'./pages/news/seminars/SeminarPage';
  
 interface AppProps {}
 
@@ -66,17 +70,23 @@ class App extends React.Component<AppProps, AppState> {
   render(){
     return (
       <Swipeable onSwipedRight={this.swipeShowSlider} onSwipedLeft={this.swipeRemoveSlider}>
-        <div className='page'>
-          <TitleBar layoutType={this.state.layoutType} toggleShowSlider={this.toggleShowSlider}></TitleBar>
-          <div className='pageBody'>
-            {(this.state.layoutType == 'mobile' && !this.state.showSlider) ? null :  <NavSlider layoutMode={this.state.layoutType} currentTab={this.state.currentTab} changeTab={this.changeTab}/>}
-            <div className='bodyContent'>
-              {(this.state.currentTab == 'Home') ? <HomePage/> : <FacultyPage/>}
+          <div className='page'>
+            <TitleBar layoutType={this.state.layoutType} toggleShowSlider={this.toggleShowSlider}></TitleBar>
+            <div className='pageBody'>
+              {(this.state.layoutType == 'mobile' && !this.state.showSlider) ? null :  <NavSlider layoutMode={this.state.layoutType} currentTab={this.state.currentTab} changeTab={this.changeTab}/>}
+              <div className='bodyContent'>
+                <Switch>
+                  <Route path="/" component={HomePage} exact/>
+                  <Route path="/academics/btech" component={BtechMnCPage} exact/>
+                  <Route path="/people/faculty" component={FacultyPage}/>
+                  <Route path="/people/staff" component={StaffPage}/>
+                  <Route path="/news/seminars" component={SeminarPage} />
+                </Switch>
+              </div>
+              <Announcements/>
             </div>
-            <Announcements/>
+            {this.state.layoutType==='mobile' ? <Marquee /> : null}
           </div>
-          {this.state.layoutType==='mobile' ? <Marquee /> : null}
-        </div>
       </Swipeable>
     );
   }  

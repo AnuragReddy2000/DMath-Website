@@ -1,0 +1,122 @@
+.seminarPage{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+}
+
+.seminarPageHeader{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(250,250,250);
+    border: 1px solid rgb(170, 170, 170);
+    margin: 3px;
+    padding-left: 10px;
+    padding-right: 10px;
+    z-index: 1;
+    position: sticky;
+    top: 12vh;
+    width: 67vw;
+    box-sizing: border-box;
+}
+
+.yearDropDown{
+    background-color: white;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    border: 1px solid rgb(170, 170, 170);
+    height: 60%;
+    padding-left: 8px;
+    padding-right: 3px;
+}
+
+.yearDropDownList{
+    text-align: right;
+    background-color: rgb(250,250,250);
+    position: fixed;
+    z-index: 3;
+    right: 17vw;
+    top: 20vh;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+@media screen and (min-width: 801px){
+    .yearDropDownList{
+        text-align: right;
+        background-color: rgb(250,250,250);
+        border: 1px solid rgb(170, 170, 170);
+        position: fixed;
+        z-index: 3;
+        right: 17.2vw;
+        top: 20.5vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: stretch;
+    }
+
+    .yearListItem{
+        padding-left: 15px;
+        padding-right: 15px;
+        margin-top: 2px;
+        margin-bottom: 2px;
+        padding-top: 5px;
+        padding-bottom: 5px;
+    }
+
+    .yearListItem:hover{
+        background-color: rgb(215, 215, 215);
+    }
+
+    .seminarPageHeader{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        background-color: rgb(250,250,250);
+        border: 1px solid rgb(170, 170, 170);
+        margin: 3px;
+        padding-left: 10px;
+        padding-right: 10px;
+        z-index: 1;
+        position: sticky;
+        top: 12vh;
+        width: 65vw;
+        box-sizing: border-box;
+    }
+}
+
+@media screen and (max-width: 800px){
+    .yearDropDownList{
+        text-align: right;
+        background-color: rgb(250,250,250);
+        position: fixed;
+        z-index: 3;
+        right: 5vw;
+        top: 19vh;
+        padding-left: 15px;
+        padding-right: 15px;
+        border: 1px solid rgb(170, 170, 170);
+    }
+
+    .seminarPageHeader{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        background-color: rgb(250,250,250);
+        border: 1px solid rgb(170, 170, 170);
+        margin: 3px;
+        padding-left: 10px;
+        padding-right: 10px;
+        z-index: 1;
+        position: sticky;
+        top: 12vh;
+        width: 96vw;
+        box-sizing: border-box;
+    }
+}

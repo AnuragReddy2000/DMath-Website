@@ -1,5 +1,5 @@
 @media screen and (max-width: 800px){
-    .hpInfoContent{
+    .bmpInfoContent{
       display: grid;
       width: 100%;
       grid-template-columns: 98%;
@@ -8,11 +8,11 @@
 }
   
 @media screen and (min-width: 801px){
-    .hpInfoContent{
+    .bmpInfoContent{
       margin-top: 1vh;
       display: grid;
       width: 100%;
-      grid-template-columns: 49% 49%;
+      grid-template-columns: 32% 32% 32%;
       justify-content: space-between;
     }
 }

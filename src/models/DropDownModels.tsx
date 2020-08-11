@@ -1,7 +1,7 @@
 export const DropDownList: Array<{ title: string, subTitles: Array<string> }>= [
     {
         title: "Academics",
-        subTitles: ['B.tech MnC','General UG','M.Sc','Ph.D','Minors in Maths']
+        subTitles: ['B.tech MnC','General UG','M.Sc','Ph.D','Minors in Maths','Curriculum']
     },
     {
         title: 'Research',
@@ -24,7 +24,7 @@ export const DropDownList: Array<{ title: string, subTitles: Array<string> }>= [
         subTitles: ['Faculty Recruitments','Project Openings']
     },
     {
-        title: 'Quick Links',
+        title: 'TimeTables',
         subTitles:  ['B.Tech MnC TimeTable','M.Sc Timetable','Department timetable']
     }
 ]
