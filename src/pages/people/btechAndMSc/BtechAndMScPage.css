@@ -1,0 +1,25 @@
+@media screen and (min-width: 801px){
+    .btechAndMScPage{
+        margin-top: 5px;
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        background-color: rgb(250,250,250);
+    }
+}
+
+@media screen and (max-width: 800px){
+    .btechAndMScPage{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        background-color: rgb(250,250,250);
+    }
+}
+
+.btechAndMScPageCol{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}

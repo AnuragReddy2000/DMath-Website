@@ -8,10 +8,13 @@ interface TableViewState{
 interface TableViewProps{
     title: string,
     content?: string,
-    sno: string,
+    sno?: string,
     speaker?: string,
     dateVenue?: string
-
+    overrideSnoWidth? : string,
+    overrideRowGap?: string,
+    link?: string,
+    linkText?: string
 }
 
 class TableView extends React.Component<TableViewProps,TableViewState>{
@@ -30,19 +33,17 @@ class TableView extends React.Component<TableViewProps,TableViewState>{
 
     render(){
         return(
-            <div className='tableViewRow'>
-                <div className='tableViewIndexNo'>
-                    <p>{this.props.sno}</p>
-                </div>
+            <div className='tableViewRow' style={{marginBottom: this.props.overrideRowGap}}>
+                {this.props.sno ? <div className='tableViewIndexNo' style={{width: this.props.overrideSnoWidth}}> <p> {this.props.sno} </p> </div> : null}
                 <div className='tableViewRest'>
                     <div className='tableViewContent' onClick={this.toggleContentView}>
                         <p>{this.props.title}</p>
-                        {(this.state.expand && this.props.content) ? <div className='tableViewShowContent'> <p >{this.props.content}</p> </div> : null}
+        {(this.state.expand && this.props.content) ? <div className='tableViewShowContent'> <p >{this.props.content}</p> <p><a href={this.props.link}>{this.props.linkText}</a></p> </div> : null}
                     </div>
-                    <div className='tableViewLastCol'>
+                    {this.props.dateVenue || this.props.speaker ? <div className='tableViewLastCol'>
                         {this.props.speaker ? <div className='tableViewSpeaker'> <p>{this.props.speaker}</p> </div> : null}
                         {this.props.dateVenue ? <div className='tableViewDate'> <p>{this.props.dateVenue}</p> </div> : null}
-                    </div>
+                    </div> : null}
                 </div>
             </div>
         )
