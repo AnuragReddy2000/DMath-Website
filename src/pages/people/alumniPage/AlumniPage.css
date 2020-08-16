@@ -1,0 +1,89 @@
+@media screen and (min-width: 650px){
+    .AlumniList{
+        display: grid;
+        width: 90%;
+        grid-template-columns: 32% 32% 32%;
+        justify-content: center;
+        align-items: center;
+    }
+    .AlumnibatchTitle{
+        width: 100%,;
+        margin-top: 10px;
+        box-sizing: border-box;
+        margin-left: 5%;
+        align-self: flex-start;
+    }
+}
+
+@media screen and (max-width: 651px) and (min-width: 421px){
+    .AlumniList{
+        display: grid;
+        width: 100%;
+        grid-template-columns: 49% 49%;
+        justify-content: center;
+        align-items: center;
+    }
+    .AlumnibatchTitle{
+        width: 100%,;
+        margin-top: 10px;
+        box-sizing: border-box;
+        align-self: flex-start;
+    }
+}
+
+@media screen and (max-width: 420px){
+    .AlumniList{
+        display: grid;
+        width: 100%;
+        grid-template-columns: 98%;
+        justify-content: center;
+        align-items: center;
+    }
+    .AlumnibatchTitle{
+        width: 100%,;
+        margin-top: 10px;
+        box-sizing: border-box;
+        align-self: flex-start;
+    }
+}
+
+.AlumniName{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.AlumniBatch{
+    width: 100%;
+    background-color: rgb(250,250,250);
+    box-sizing: border-box;
+    border: 1px solid rgb(216, 216, 216);
+    margin: 5px;
+    padding: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+@media screen and (max-width: 800px){
+    .aluminfoContent{
+      display: grid;
+      width: 100%;
+      grid-template-columns: 98%;
+      row-gap: 2vh;
+      justify-content: space-between;
+    }  
+}
+  
+@media screen and (min-width: 801px){
+    .aluminfoContent{
+      margin-top: 1vh;
+      display: grid;
+      width: 100%;
+      grid-template-columns: 49% 49%;
+      row-gap: 2vh;
+      justify-content: space-between;
+    }
+}

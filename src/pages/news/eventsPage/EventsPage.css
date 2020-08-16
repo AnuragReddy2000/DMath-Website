@@ -1,0 +1,35 @@
+.EventsPageHeader{
+    background-color: rgb(250,250,250);
+    color: darkblue;
+    font-size: x-large;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    margin-top: 1vh;
+    margin-bottom: 1vh;
+    padding-left: 1vw;
+    padding-top: 1vh;
+    padding-bottom: 1vh;
+    box-sizing: border-box;
+}
+
+.EventsPageBody{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+}
+
+@media screen and (max-width: 800px){
+    .EventsPageCalendarRow{
+        height: 72vh;
+        width: 100%;
+    }
+}
+
+@media screen and (min-width: 801px){
+    .EventsPageCalendarRow{
+        width: 100%;
+        height: 100%;
+    }
+}

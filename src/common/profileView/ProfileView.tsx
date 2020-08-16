@@ -4,18 +4,17 @@ import './ProfileView.css';
 interface ProfileViewProps{
     Image?: string;
     Name: string;
-    Designation: string;
+    Designation?: string;
     Area?: string;
     RoomNo?: string;
     email?: string;
     link?: string;
     supervisor?: string;
+    periodOfStay?: string;
+    extraDetails?: string[];
 }
 
 class ProfileView extends React.Component<ProfileViewProps>{
-    constructor(props: ProfileViewProps){
-        super(props);
-    }
 
     render(){
         return(
@@ -26,11 +25,13 @@ class ProfileView extends React.Component<ProfileViewProps>{
                 <div className='profileInfo'>
                     <p className='profileViewName'>{this.props.Name}</p>
                     <p className='profileViewDesignation'>{this.props.Designation}</p>
-                    {(this.props.Area != undefined) ? <p className='profileViewExtras'>Areas of Interest:  {this.props.Area}</p> : null}
-                    {(this.props.supervisor != undefined) ? <p className='profileViewExtras'>supervisor:  {this.props.supervisor}</p> : null}
-                    {(this.props.email != undefined) ? <p className='profileViewExtras'>Email:  {this.props.email}</p> : null}
-                    {(this.props.RoomNo != undefined) ? <p className='profileViewExtras'>Room No:  {this.props.RoomNo}</p> : null}
-                    {(this.props.link != undefined) ? <p className='profileViewExtras'><a href={this.props.link}>Link to website</a> </p> : null}
+                    {(this.props.Area !== undefined) ? <p className='profileViewExtras'>{this.props.Area}</p> : null}
+                    {(this.props.supervisor !== undefined) ? <p className='profileViewExtras'>{this.props.supervisor}</p> : null}
+                    {this.props.extraDetails?.map(detail => <p className='profileViewExtras'>{detail}</p>)}
+                    {(this.props.email !== undefined) ? <p className='profileViewExtras'>{this.props.email}</p> : null}
+                    {(this.props.RoomNo !== undefined) ? <p className='profileViewExtras'>{this.props.RoomNo}</p> : null}
+                    {(this.props.periodOfStay !== undefined) ? <p className='profileViewExtras'>{this.props.periodOfStay}</p> : null}
+                    {(this.props.link !== undefined) ? <p className='profileViewExtras'><a href={this.props.link}>Link to website</a> </p> : null}
                 </div>
             </div>
         )

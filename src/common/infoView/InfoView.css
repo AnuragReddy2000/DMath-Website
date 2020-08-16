@@ -54,4 +54,5 @@
 .content{
     align-self: start;
     margin-bottom: 1vh;
+    white-space: pre-line;
 }

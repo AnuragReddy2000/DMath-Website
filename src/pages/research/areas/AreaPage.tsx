@@ -10,9 +10,9 @@ class AreaPage extends React.Component{
         return(
             <div style={{width: '100%'}}>
                 <div style={{width:'100%', backgroundColor:'rgb(250,250,250)', paddingTop: '2vh', marginTop: '1vh'}}>
-                    <Carousel name='About Us' images={CarouselPics['Areas']} imagesNum={CarouselPics['Areas'].length}/>
+                    <Carousel images={CarouselPics['Areas']} imagesNum={CarouselPics['Areas'].length}/>
                     <InfoView 
-                    title='Areas of Research Interests' 
+                    title='Areas of Research Interests:' 
                     titleColor='darkblue'
                     info={['Pursuant to our vision, the department aims to become a world class center for theoretical, applicable and interdisciplinary research. The faculty members of the department are engaged in an active and an equal basis collaboration with eminent researchers at three levels.', 
                     ' At a very local level there are same-interest or complementary-interest research groups at the intra- and inter-departmental level. At a national and inter-national level, faculty members maintain an active collaboration with both eminent researchers and groups in their respective areas of research.',

@@ -1,0 +1,20 @@
+@media screen and (max-width: 800px){
+    .pdinfoContent{
+      display: grid;
+      width: 100%;
+      grid-template-columns: 98%;
+      row-gap: 2vh;
+      justify-content: space-between;
+    }  
+  }
+  
+  @media screen and (min-width: 801px){
+    .pdinfoContent{
+      margin-top: 1vh;
+      display: grid;
+      width: 100%;
+      grid-template-columns: 49% 49%;
+      row-gap: 2vh;
+      justify-content: space-between;
+    }
+  }

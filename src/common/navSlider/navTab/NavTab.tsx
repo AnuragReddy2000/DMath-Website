@@ -1,33 +1,38 @@
 import React from 'react';
 import './NavTab.css';
 import {BsDot} from 'react-icons/bs';
-import {IconsList} from '../../../models/IconsList';
 import {Link} from 'react-router-dom';
+import { IconType } from 'react-icons';
 
 interface NavTabProp{
     onClickEvent: (tab: string) => void;
     name: string;
     currentTab: string
     urlLink?: string
+    pageType?: string
+    icon?: IconType
 }
 
 interface NavTabState{}
 
 class NavTab extends React.Component<NavTabProp,NavTabState>{
-    constructor(props: NavTabProp, state: NavTabState){
-        super(props,state); 
-    }
 
     onClick=():void =>{
         this.props.onClickEvent(this.props.name);
     }
 
     render(){
-        var Icon = IconsList[this.props.name];
+        const Icon = this.props.icon as React.ElementType;
         return(
-            <Link to={this.props.urlLink ? this.props.urlLink : '/'} className={this.props.urlLink ? 'active-link' : 'disabled-link'} style={{textDecoration: 'none', color: 'inherit'}}>
-                <div className={((this.props.currentTab==this.props.name) ? 'active':'inactive') + 'NavTab'} onClick={this.onClick}>
-                    {(IconsList[this.props.name]==undefined)? <BsDot/> : <Icon/>}
+            this.props.pageType === 'static' ? <a href={this.props.urlLink} style={{textDecoration: 'none', color: 'inherit'}} target="_blank">
+                <div className={((this.props.currentTab===this.props.name) ? 'active':'inactive') + 'NavTab'} onClick={this.onClick}>
+                    {(this.props.icon === undefined) ? <BsDot/> : <Icon/>}
+                    <p className='navTabName'>{this.props.name}</p>
+                </div>
+            </a>
+            : <Link to={this.props.urlLink ? this.props.urlLink : '/'} className={this.props.urlLink ? 'active-link' : 'disabled-link'} style={{textDecoration: 'none', color: 'inherit'}}>
+                <div className={((this.props.currentTab===this.props.name) ? 'active':'inactive') + 'NavTab'} onClick={this.onClick}>
+                    {(this.props.icon === undefined) ? <BsDot/> : <Icon/>}
                     <p className='navTabName'>{this.props.name}</p>
                 </div>
             </Link>

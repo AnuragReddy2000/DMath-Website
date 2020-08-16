@@ -1,25 +1,94 @@
-@media screen and (min-width: 801px){
-    .btechAndMScPage{
-        margin-top: 5px;
-        width: 100%;
-        display: flex;
-        flex-direction: row;
-        background-color: rgb(250,250,250);
+@media screen and (min-width: 650px){
+    .studentsList{
+        display: grid;
+        width: 90%;
+        grid-template-columns: 32% 32% 32%;
+        justify-content: center;
+        align-items: center;
+    }
+    .batchTitle{
+        width: 100%,;
+        margin-top: 10px;
+        box-sizing: border-box;
+        margin-left: 5%;
+        align-self: flex-start;
     }
 }
 
-@media screen and (max-width: 800px){
-    .btechAndMScPage{
+@media screen and (max-width: 651px) and (min-width: 421px){
+    .studentsList{
+        display: grid;
         width: 100%;
-        display: flex;
-        flex-direction: column;
-        background-color: rgb(250,250,250);
+        grid-template-columns: 49% 49%;
+        justify-content: center;
+        align-items: center;
+    }
+    .batchTitle{
+        width: 100%,;
+        margin-top: 10px;
+        box-sizing: border-box;
+        align-self: flex-start;
     }
 }
 
-.btechAndMScPageCol{
+@media screen and (max-width: 420px){
+    .studentsList{
+        display: grid;
+        width: 100%;
+        grid-template-columns: 98%;
+        justify-content: center;
+        align-items: center;
+    }
+    .batchTitle{
+        width: 100%,;
+        margin-top: 10px;
+        box-sizing: border-box;
+        align-self: flex-start;
+    }
+}
+
+.btechAndMScPage{
+    margin-top: 5px;
     width: 100%;
     display: flex;
     flex-direction: column;
+    justify-content: center;
     align-items: center;
+}
+
+.studentName{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.studentsBatch{
+    width: 100%;
+    background-color: rgb(250,250,250);
+    box-sizing: border-box;
+    border: 1px solid rgb(216, 216, 216);
+    margin: 5px;
+    padding: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.toolTipText{
+    visibility: hidden;
+    background-color: rgb(216, 216, 216);
+    color: black;
+    text-align: center;
+    border-radius: 6px;
+    font-size: small;
+    padding: 2px;
+    margin: 2px;
+    position: absolute;
+    z-index: 1;
+}
+
+.studentName:hover .toolTipText{
+    visibility: visible;
 }

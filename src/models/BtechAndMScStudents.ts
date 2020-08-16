@@ -1,6 +1,13 @@
-export const BtechAndMScStudents: Array<[string,Array< {name: string, email: string } >]> = [
-    [
-        "B.Tech 2017" , [
+import btech_MnC17 from '../images/people/btech_msc/btech_MnC17.jpg';
+import btech_MnC18 from '../images/people/btech_msc/btech_MnC18.jpg';
+import msc19 from '../images/people/btech_msc/msc19.jpg';
+import btech_MnC19 from '../images/people/btech_msc/btech_MnC19.jpg';
+
+export const BtechAndMScStudents: Array<{batch: string, grpImage: string, students: Array< {name: string, email: string }> }> = [
+    {
+        batch: "B.Tech 2017" ,
+        grpImage: btech_MnC17,
+        students: [
             {name: "B. Srujana", email: 'ma17btech11001@iith.ac.in'},
             {name: "G. Sai Nikhil", email: 'ma17btech11002@iith.ac.in'},
             {name: "Harsh Raj", email: 'ma17btech11003@iith.ac.in'},
@@ -12,9 +19,11 @@ export const BtechAndMScStudents: Array<[string,Array< {name: string, email: str
             {name: "Ritesh Yadav", email: 'ma17btech11009@iith.ac.in'},
             {name: "Aravind Reddy K.V.", email: 'ma17btech11010@iith.ac.in'},
         ]
-    ],
-    [
-        "B.Tech 2018" , [
+    },
+    {
+        batch: "B.Tech 2018" ,
+        grpImage: btech_MnC18, 
+        students: [
             {name: "Anurag Reddy Karri", email: 'ma18btech11001@iith.ac.in'},
             {name: "Bhoraniya Rohit Kumar Arunbhai", email: 'ma18btech11002@iith.ac.in'},
             {name: "Hiransh Gupta", email: 'ma18btech11003@iith.ac.in'},
@@ -27,9 +36,11 @@ export const BtechAndMScStudents: Array<[string,Array< {name: string, email: str
             {name: "Vemuri Venkat Satya Pavan Kumar", email: 'ma18btech11010@iith.ac.in'},
             {name: "Vishnu V.S.", email: 'ma18btech11011@iith.ac.in'},
         ]
-    ],
-    [
-        "B.Tech 2019" , [
+    },
+    {
+        batch: "B.Tech 2019" , 
+        grpImage: btech_MnC19,
+        students: [
             {name: "Boda Suman Nayak", email: 'ma19btech11001@iith.ac.in'},
             {name: "Chintu Varun Rao", email: 'ma19btech11002@iith.ac.in'},
             {name: "Jilugu Srikar Reddy", email: 'ma19btech11003@iith.ac.in'},
@@ -40,11 +51,14 @@ export const BtechAndMScStudents: Array<[string,Array< {name: string, email: str
             {name: "Samatham Manish Krishna", email: 'ma19btech11008@iith.ac.in'},
             {name: "Siddhant Sandeep Chandorkar", email: 'ma19btech11009@iith.ac.in'},
             {name: "Kalapagoor Mahima", email: 'ma19btech11010@iith.ac.in'},
+            {name: "Grandhi Sindhuja", email: 'ma19btech11011@iith.ac.in'},
             {name: "Sharan basav Patil", email: "ma19btech11012@iith.ac.in"}
         ]
-    ],
-    [
-        "M.Sc 2019" , [
+    },
+    {
+        batch: "M.Sc 2019" , 
+        grpImage: msc19,
+        students: [
             {name: "Atanu Manna", email: 'ma19mscst11001@iith.ac.in'},
             {name: "Chetan Singh", email: 'ma19mscst11002@iith.ac.in'},
             {name: "Dhananjay Verma", email: 'ma19mscst11003@iith.ac.in'},
@@ -64,23 +78,5 @@ export const BtechAndMScStudents: Array<[string,Array< {name: string, email: str
             {name: "Vishal Aggarwal", email: 'ma19mscst11017@iith.ac.in'},
             {name: "Vivek Kumar", email: 'ma19mscst11018@iith.ac.in'}
         ]
-    ],
-    [
-        "M.Sc 2018" , [
-            {name: "Akshaya RaviChandran", email: 'ma18mscst11001@iith.ac.in'},
-            {name: "Banothu Sharath Kumar", email: 'ma18mscst11002@iith.ac.in'},
-            {name: "Bishal Bhunia", email: 'ma18mscst11003@iith.ac.in'},
-            {name: "Kshama Singhal", email: 'ma18mscst11004@iith.ac.in'},
-            {name: "Megha Megha", email: 'ma18mscst11005@iith.ac.in'},
-            {name: "Meghender Pal", email: 'ma18mscst11006@iith.ac.in'},
-            {name: "Rohan Singh", email: 'ma18mscst11007@iith.ac.in'},
-            {name: "Sachin Bijarniya", email: 'ma18mscst11008@iith.ac.in'},
-            {name: "Shivcharan Saini", email: 'ma18mscst11009@iith.ac.in'},
-            {name: "Shradha Singh", email: 'ma18mscst11010@iith.ac.in'},
-            {name: "Titash Kumar Mahajan", email: 'ma18mscst11011@iith.ac.in'},
-            {name: "Utkarsh Mangal", email: 'ma18mscst11012@iith.ac.in'},
-            {name: "Vasav Ayush", email: 'ma18mscst11013@iith.ac.in'},
-            {name: "Avneet Kaur", email: 'ma18mscst11014@iith.ac.in'},
-        ]
-    ]
+    },
 ]

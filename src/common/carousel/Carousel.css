@@ -4,9 +4,16 @@
         display: flex;
         flex-direction: row;
         align-items: center;
-        justify-content: space-between;
+        justify-content: center;
         height: 30vh;
         overflow-y: hidden;
+    }
+    .carouselImage{
+        width: 95%;
+    }
+
+    .carouselButtons{
+        display: none;
     }
 }
 
@@ -16,9 +23,12 @@
         display: flex;
         flex-direction: row;
         align-items: center;
-        justify-content: space-between;
+        justify-content: center;
         height: 50vh;
         overflow-y: hidden;
+    }
+    .carouselImage{
+        width: 95%;
     }
 }
 
@@ -28,8 +38,14 @@
         display: flex;
         flex-direction: row;
         align-items: center;
-        justify-content: space-between;
+        justify-content: center;
         height: 60vh;
         overflow-y: hidden;
     }
+
+    .carouselImage{
+        width: 85%;
+    }
 }
+
+

@@ -2,8 +2,10 @@ import React from 'react';
 import './NavSlider.css';
 import NavTab from './navTab/NavTab';
 import DropDownTab from './dropDownTab/DropDownTab';
-import {DropDownList} from '../../models/DropDownModels';
+import {AiOutlineHome} from 'react-icons/ai';
+import {DropDownList} from '../../models/DropDownsAndTabs';
 import {FaFacebookSquare} from 'react-icons/fa';
+import {Link} from 'react-router-dom';
 
 interface NavSliderProps{
     layoutMode: string;
@@ -37,12 +39,13 @@ class NavSlider extends React.Component<NavSliderProps, NavSliderState>{
     render(){
         return(
             <div className={this.props.layoutMode + 'Slider'}>
-                <NavTab name='Home' onClickEvent={this.home} currentTab={this.props.currentTab} urlLink='/'/>
-                {DropDownList.map(value =>  <DropDownTab name={value.title} currentTab={this.props.currentTab} currentDropdown={this.state.currentDropDown} onClickEvent={this.props.changeTab} dropDownUpdate={this.changeDropDownTab} contentTabs={value.subTitles}/>)} 
+                <NavTab name='Home' onClickEvent={this.home} currentTab={this.props.currentTab} urlLink='/' icon={AiOutlineHome} pageType='component'/>
+                {DropDownList.map((value,index) =>  <DropDownTab key={index} name={value.title} currentTab={this.props.currentTab} icon={value.icon} currentDropdown={this.state.currentDropDown} onClickEvent={this.props.changeTab} dropDownUpdate={this.changeDropDownTab} contentTabs={value.subTitles}/>)} 
                 <div className='contactUs'>
-                    <p>Contact Us </p>
-                    <FaFacebookSquare size={32} color={'#3b5998'}/>
-                    <p>IITH Home</p>
+                    <Link to='/contactUs' style={{textDecoration: 'none', color: 'inherit'}}><p>Contact Us </p></Link>
+                    <a href='https://www.facebook.com/iithmathematicsdepartment/' style={{textDecoration: 'none', color: 'inherit'}} target='_blank'><FaFacebookSquare size={32} color={'#3b5998'}/></a>
+                    <p><a href='https://www.iith.ac.in/' style={{textDecoration: 'none', color: 'inherit'}} target='_blank'>IITH Home</a></p>
+                    <Link to='/credits' style={{textDecoration: 'none', color: 'inherit'}}><p>Credits</p></Link>
                 </div>   
             </div>
         )

@@ -11,9 +11,9 @@ class Minors extends React.Component{
         return(
             <div>
                 <div style={{width:'100%', backgroundColor:'rgb(250,250,250)', paddingTop: '2vh', marginTop: '1vh'}}>
-                    <Carousel name='About Us' images={CarouselPics['Minors']} imagesNum={CarouselPics['Minors'].length}/>
+                    <Carousel images={CarouselPics['Minors']} imagesNum={CarouselPics['Minors'].length}/>
                     <InfoView 
-                    title='Minor Programme in Mathematics' 
+                    title='Minor Programme in Mathematics:' 
                     titleColor='darkblue'
                     info={['The department offers a minor programme in Mathematics. For a B.Tech / M.Tech student to obtain a minor in Math he/she needs to take 12 credits of Math courses from the list below:']}
                     />

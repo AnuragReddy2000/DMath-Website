@@ -15,7 +15,7 @@ class PublicationsPage extends React.Component<PublicationsPageProps,Publication
     constructor(props: PublicationsPageProps,state: PublicationsPageState){
         super(props,state);
         this.state = {
-            currentYear: '2018',
+            currentYear: '2020',
             dropDownOpen: false
         }
     }
@@ -46,6 +46,7 @@ class PublicationsPage extends React.Component<PublicationsPageProps,Publication
                     </div>
                 </div>
                 {this.state.dropDownOpen ? <div className='publicationsYearDropDownList'>
+                    <p onClick={() => this.changeYear('2020')} className='publicationsYearListItem'>2020</p>
                     <p onClick={() => this.changeYear('2019')} className='publicationsYearListItem'>2019</p>
                     <p onClick={() => this.changeYear('2018')} className='publicationsYearListItem'>2018</p>
                     <p onClick={() => this.changeYear('2017')} className='publicationsYearListItem'>2017</p>

@@ -12,9 +12,9 @@ class Homepage extends React.Component{
         return(
             <div>
                 <div style={{width:'100%', backgroundColor:'rgb(250,250,250)', paddingTop: '2vh', marginTop: '1vh'}}>
-                    <Carousel name='About Us' images={CarouselPics['About Us']} imagesNum={CarouselPics['About Us'].length}/>
+                    <Carousel images={CarouselPics['About Us']} imagesNum={CarouselPics['About Us'].length}/>
                     <InfoView 
-                    title='Welcome to Department of Mathematics' 
+                    title='Welcome to Department of Mathematics:' 
                     titleColor='darkblue'
                     info={['The Department of Mathematics was one of the six departments that was founded along with the Institute in 2008. Since its inception, the department has made a conscious effort to grow in sync with the directions of the Institute and an awareness of the larger needs of the society.', 
                     'In consonance with this philosophy, the department aims "to foster eclecticism and excellence in mathematical education and research which is well poised between abstraction and application."']}

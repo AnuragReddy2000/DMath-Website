@@ -12,9 +12,9 @@ class PhDPage extends React.Component{
         return(
             <div>
                 <div style={{width:'100%', backgroundColor:'rgb(250,250,250)', paddingTop: '2vh', marginTop: '1vh', whiteSpace: 'pre-line'}}>
-                    <Carousel name='About Us' images={CarouselPics['PhD']} imagesNum={CarouselPics['PhD'].length}/>
+                    <Carousel images={CarouselPics['PhD']} imagesNum={CarouselPics['PhD'].length}/>
                     <InfoView 
-                    title='Our Doctoral Programme' 
+                    title='Our Doctoral Programme: ' 
                     titleColor='darkblue'
                     info={['The department has a lively research environs with an active and spirited group of researchers.']}
                     />

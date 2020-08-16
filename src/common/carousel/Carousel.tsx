@@ -5,7 +5,6 @@ import './Carousel.css';
 import {Swipeable, EventData } from 'react-swipeable';
 
 interface CarouselProps{
-    name: string;
     images: string[];
     imagesNum: number;
 }
@@ -30,7 +29,7 @@ class Carousel extends React.Component<CarouselProps,CarouselState>{
         clearInterval(this.id);
         this.id = setInterval(this.nextPic, 2500);
         this.setState({
-            currentPic: (this.state.currentPic == this.props.imagesNum - 1) ? 0 : this.state.currentPic + 1
+            currentPic: (this.state.currentPic === this.props.imagesNum - 1) ? 0 : this.state.currentPic + 1
         })
     }
 
@@ -38,7 +37,7 @@ class Carousel extends React.Component<CarouselProps,CarouselState>{
         clearInterval(this.id);
         this.id = setInterval(this.nextPic, 2500);
         this.setState({
-            currentPic: (this.state.currentPic == 0) ? this.props.imagesNum-1 : this.state.currentPic - 1
+            currentPic: (this.state.currentPic === 0) ? this.props.imagesNum-1 : this.state.currentPic - 1
         })
     }
 
@@ -55,11 +54,11 @@ class Carousel extends React.Component<CarouselProps,CarouselState>{
         return(
             <Swipeable onSwipedRight={this.swipeRightEvent} onSwipedLeft={this.swipeLeftEvent} >
                 <div className='carousel'>
-                    <BsChevronCompactLeft size={32} color='darkgrey' onClick={this.prevPic}/>
+                    {this.props.imagesNum>1 ? <BsChevronCompactLeft size={32} color='darkgrey' onClick={this.prevPic} className='carouselButtons'/> : null}
                     <div className='carouselImage'>
                         <img src={this.props.images[this.state.currentPic]} width='100%'/>
                     </div>
-                    <BsChevronCompactRight size={32} color='darkgrey' onClick={this.nextPic}/>
+                    {this.props.imagesNum>1 ? <BsChevronCompactRight size={32} color='darkgrey' onClick={this.nextPic} className='carouselButtons'/> : null}
                 </div>
             </Swipeable>
         )

@@ -1,0 +1,26 @@
+.creditsMain{
+    background-color: rgb(250,250,250);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+@media screen and (min-width: 700px){
+    .creditsPic{
+        width: 60%;
+    }
+}
+
+@media screen and (max-width: 699px){
+    .creditsPic{
+        width: 60%;
+    }
+}
+
+.creditsNames{
+    background-color: rgb(250,250,250);
+    margin-top: 8px;
+    display: flex;
+    flex-direction: column;
+}
