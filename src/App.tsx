@@ -128,7 +128,7 @@ class App extends React.Component<AppProps, AppState> {
                 <Route path="/contactUs" component={ContactUs} />
               </Switch>
             </div>
-            <Announcements/>
+            <Announcements changeTab={this.changeTab}/>
           </div>
           {this.state.layoutType==='mobile' ? <Marquee /> : null}
         </div>

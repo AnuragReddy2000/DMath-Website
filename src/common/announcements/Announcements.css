@@ -3,21 +3,23 @@
   .announcementColumn{
     display: flex;
     flex-direction: column;
+    align-items: center;
     width: 20vw;
     border-right: 1px solid rgb(236, 236, 236);
     box-shadow: -2px 0px 1px rgb(216, 216, 216);
     background-color: rgb(250, 250, 250);
     margin-right: 2px;
-    padding: 4px;
+    padding: 5px;
   }
   
   .announcements{
-    height: 38vh;
+    height: 76vh;
     width: 100%;
     background-color: rgb(250, 250, 250);
     margin-top: 1vh;
     margin-left: 3px;
     margin-right: 3px;
+    margin-bottom: 1vh;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -27,40 +29,49 @@
     position: -webkit-sticky;
     top: 13vh;
     text-align: left;
+    overflow-y: scroll;
+    scrollbar-width: none;
+    -webkit-overflow-scrolling: touch;
+    border-bottom: 1px solid rgb(197, 197, 197);
+  }
+
+  .announcements::-webkit-scrollbar{
+    display: none;
   }
   
-  .events{
-    height: 46vh;
-    width: 100%;
-    background-color: rgb(250, 250, 250);
-    margin-top: 1vh;
-    margin-right: 10px;
-    display: flex;
-    flex-direction: column;
-    justify-content: stretch;
-    align-items: center;
-    box-sizing: border-box;
+  .announceList{
+    font-size: medium;
+    align-self: start;
+    margin-bottom: 3px;
+    margin-left: 3px;
+    flex-shrink: 0;
+  }
+  
+  .announceTitle{
+    color: darkblue;
+    margin-top: 5px;
+    margin-bottom: 4px;
+    align-self: center;
+    font-size: large;
+    border-bottom: 1px solid rgb(197, 197, 197);
+    width: 98%;
+  }
+
+  .announcementIcon{
+    color: darkblue;
+    margin-right: 2px;
+  }
+
+  .eventsButton{
+    text-align: center;
+    border: 1px solid grey;
     position: sticky;
     position: -webkit-sticky;
-    top: 53vh;
-    text-align: left;
+    top: 90vh;
+    width: 90%;
+    box-shadow: 0.5px 0.5px 1px blue;
+    color: blue;
   }
-  
-    .announceList{
-        font-size: small;
-        align-self: start;
-        margin-bottom: 3px;
-        margin-left: 3px;
-    }
-  
-      .announceTitle{
-        color: rgb(0, 0, 187);
-        margin-top: 5px;
-        margin-bottom: 4px;
-        align-self: center;
-        font-size: large;
-        border-bottom: 1px dotted rgb(197, 197, 197);
-      }
 }
     
 @media screen and (max-width: 800px){

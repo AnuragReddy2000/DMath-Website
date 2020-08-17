@@ -1,7 +1,7 @@
 .mobileSlider{
     width: 75vw;
     z-index: 10;
-    height: 89vh;
+    height: 84vh;
     background-color: rgb(250, 250, 250);
     border-right: 1px solid rgb(236, 236, 236);
     display: flex;
@@ -15,13 +15,13 @@
     scrollbar-width: none;
     -webkit-overflow-scrolling: touch;
     position: fixed;
-    position: -webkit-sticky;
+    position: -webkit-fixed;
     top: 11vh;
 }
 
 .desktopSlider{
     box-sizing: border-box;
-    width: 25vw;
+    width: 18vw;
     padding-left: 1.5vw;
     padding-right: 0px;
     z-index: 1;
@@ -38,6 +38,7 @@
     position: sticky;
     position: -webkit-sticky;
     top: 11vh;
+    box-sizing: border-box;
 }
 
 .desktopSlider::-webkit-scrollbar{
@@ -49,6 +50,7 @@
 }
 
 .contactUs{
+    flex-shrink: 0;
     border-top: 1px solid rgb(236, 236, 236);
     box-sizing: border-box;
     margin-right: 2vw;
@@ -58,5 +60,6 @@
     flex-wrap: wrap;
     align-items: center;
     justify-content: space-between;
+    margin-bottom: 3px;
 }
 

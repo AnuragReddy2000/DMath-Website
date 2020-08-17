@@ -22,7 +22,7 @@ class EventsPage extends React.Component<EventsPageProps,EventsPageState>{
                     <p style={{margin: '0px', padding: '0px'}}>Events:</p>
                 </div>
                 <div className='EventsPageCalendarRow'>
-                    <iframe src="https://calendar.google.com/calendar/embed?height=600&amp;wkst=1&amp;bgcolor=%23fafafa&amp;ctz=Asia%2FKolkata&amp;src=YW51cmFncmVkZHkxMDAwQGdtYWlsLmNvbQ&amp;src=YWRkcmVzc2Jvb2sjY29udGFjdHNAZ3JvdXAudi5jYWxlbmRhci5nb29nbGUuY29t&amp;src=ZW4uaW5kaWFuI2hvbGlkYXlAZ3JvdXAudi5jYWxlbmRhci5nb29nbGUuY29t&amp;color=%237986CB&amp;color=%2333B679&amp;color=%230B8043&amp;showPrint=0&amp;showTitle=0&amp;showNav=1&amp;showTabs=1&amp;mode=MONTH&amp;showCalendars=0&amp;showTz=0" style={{borderWidth:"0", width:"100%", height:"100%" }}></iframe>
+                    <iframe src="https://calendar.google.com/calendar/embed?height=600&amp;wkst=1&amp;bgcolor=%23fafafa&amp;ctz=Asia%2FKolkata&amp;src=bGV1N2d0bGhpYmx1MHRzYmkxNW5kdW5kYjhAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ&amp;src=ZW4uaW5kaWFuI2hvbGlkYXlAZ3JvdXAudi5jYWxlbmRhci5nb29nbGUuY29t&amp;color=%23D81B60&amp;color=%230B8043&amp;showPrint=0&amp;showCalendars=0" style={{borderWidth:"0", width:"100%", height:"100%", backgroundColor: "rgb(250,250,250)"}}></iframe>
                 </div>
             </div>
         )

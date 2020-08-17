@@ -5,6 +5,7 @@
     justify-content: flex-start;
     margin-bottom: 2px;
     box-sizing: border-box;
+    flex-shrink: 0;
 }
 
 .closedTitle:hover{
