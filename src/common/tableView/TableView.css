@@ -68,6 +68,8 @@
         white-space: pre-line;
         padding-left: 12px;
         padding-right: 6px;
+        padding-top: 5px;
+        padding-bottom: 3px;
     }
     
     .tableViewDate{

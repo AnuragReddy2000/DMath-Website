@@ -54,6 +54,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    box-sizing: border-box;
 }
 
 .studentName{
@@ -74,9 +75,11 @@
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
+    box-sizing: border-box;
 }
 
 .toolTipText{
+    display: none;
     visibility: hidden;
     background-color: rgb(216, 216, 216);
     color: black;
@@ -90,5 +93,6 @@
 }
 
 .studentName:hover .toolTipText{
+    display: block;
     visibility: visible;
 }
