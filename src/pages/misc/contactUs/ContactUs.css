@@ -28,4 +28,5 @@
 
 .toolTip:hover .toolTipText{
     visibility: visible;
+    display: inline;
 }

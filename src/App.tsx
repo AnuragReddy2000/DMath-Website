@@ -30,8 +30,8 @@ import DoctoralPage from './pages/people/doctoralPage/DoctoralPage';
 import CurriculumPage from './pages/academics/curriculum/CurriculumPage';
 import AlumniPage from './pages/people/alumniPage/AlumniPage';
 import Credits from './pages/misc/credits/Credits';
-import contactUs from './pages/misc/contactUs/ContactUs';
 import ContactUs from './pages/misc/contactUs/ContactUs';
+import {BsCaretLeftFill} from 'react-icons/bs';
 
 interface AppProps {}
 
@@ -39,6 +39,7 @@ interface AppState {
   layoutType: string;
   showSlider: boolean;
   currentTab: string;
+  showAnnouncements: boolean;
 }
 
 class App extends React.Component<AppProps, AppState> {
@@ -46,6 +47,7 @@ class App extends React.Component<AppProps, AppState> {
   constructor(props: AppProps, state: AppState) {
     super(props, state);
     this.state = {
+      showAnnouncements: false,
       layoutType: (window.outerWidth > 800)? 'desktop':'mobile',
       showSlider: false,
       currentTab: 'Home'
@@ -92,6 +94,12 @@ class App extends React.Component<AppProps, AppState> {
     }
   }
 
+  toggleShowAnnouncements =():void =>{
+    this.setState({
+      showAnnouncements: !this.state.showAnnouncements
+    })
+  }
+
   render(){
     return (
       <Swipeable onSwipedRight={this.swipeShowSlider} onSwipedLeft={this.swipeRemoveSlider}>
@@ -100,6 +108,7 @@ class App extends React.Component<AppProps, AppState> {
           <div className='pageBody'>
             {(this.state.layoutType === 'mobile' && !this.state.showSlider) ? null :  <NavSlider layoutMode={this.state.layoutType} currentTab={this.state.currentTab} changeTab={this.changeTab}/>}
             <div className='bodyContent'>
+              <div style={{width: this.state.showAnnouncements ? '100%' : '95%'}}>
               <Switch>
                 <Route path="/" component={HomePage} exact/>
                 <Route path="/academics/btech" on component={BtechMnCPage} exact/>
@@ -127,8 +136,20 @@ class App extends React.Component<AppProps, AppState> {
                 <Route path="/credits" component={Credits}/>
                 <Route path="/contactUs" component={ContactUs} />
               </Switch>
+              </div>
             </div>
-            <Announcements changeTab={this.changeTab}/>
+            {this.state.showAnnouncements ? <Announcements changeTab={this.changeTab} hideAnnouncements={this.toggleShowAnnouncements} /> : 
+            <div>
+              <div className='announcementButton' onClick={this.toggleShowAnnouncements}>
+                <BsCaretLeftFill/>
+                <p className='annButtonText'>ANNOUNCEMENTS</p>
+              </div>
+              <div className='upcomingeventsButton' onClick={this.toggleShowAnnouncements}>
+                <BsCaretLeftFill />
+                <p className='annButtonText'>UPCOMING EVENTS</p>
+              </div>
+            </div>
+            }
           </div>
           {this.state.layoutType==='mobile' ? <Marquee /> : null}
         </div>

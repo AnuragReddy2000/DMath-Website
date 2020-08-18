@@ -44,14 +44,16 @@ class SeminarPage extends React.Component<SeminarPageProps,SeminarPageState>{
                         <p>{this.state.currentYear} <AiFillCaretDown/></p>
                     </div>
                 </div>
-                {this.state.dropDownOpen ? <div className='yearDropDownList'>
-                    <p onClick={() => this.changeYear('2019')} className='yearListItem'>2019</p>
-                    <p onClick={() => this.changeYear('2018')} className='yearListItem'>2018</p>
-                    <p onClick={() => this.changeYear('2017')} className='yearListItem'>2017</p>
-                    <p onClick={() => this.changeYear('2016')} className='yearListItem'>2016</p>
-                    <p onClick={() => this.changeYear('2015')} className='yearListItem'>2015</p>
-                    <p onClick={() => this.changeYear('2014')} className='yearListItem'>2014</p>
-                    <p onClick={() => this.changeYear('2013 and older')} className='yearListItem'>2013 and older</p>
+                {this.state.dropDownOpen ? <div className='yearDropDownListBox'>
+                    <div className='yearDropDownList'>
+                        <p onClick={() => this.changeYear('2019')} className='yearListItem'>2019</p>
+                        <p onClick={() => this.changeYear('2018')} className='yearListItem'>2018</p>
+                        <p onClick={() => this.changeYear('2017')} className='yearListItem'>2017</p>
+                        <p onClick={() => this.changeYear('2016')} className='yearListItem'>2016</p>
+                        <p onClick={() => this.changeYear('2015')} className='yearListItem'>2015</p>
+                        <p onClick={() => this.changeYear('2014')} className='yearListItem'>2014</p>
+                        <p onClick={() => this.changeYear('2013 and older')} className='yearListItem'>2013 and older</p>
+                    </div>
                 </div> : null}
                 {seminarList.map(value => <TableView title={value['Topic']} sno={value['S.No']} speaker={'Speaker :  ' + value['Speaker']} content={value['Abstract']} dateVenue={value['Date & Venue']}/>)}
             </div>

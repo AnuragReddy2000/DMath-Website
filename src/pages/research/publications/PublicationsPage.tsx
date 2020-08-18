@@ -45,11 +45,13 @@ class PublicationsPage extends React.Component<PublicationsPageProps,Publication
                         <p>{this.state.currentYear} <AiFillCaretDown/></p>
                     </div>
                 </div>
-                {this.state.dropDownOpen ? <div className='publicationsYearDropDownList'>
-                    <p onClick={() => this.changeYear('2020')} className='publicationsYearListItem'>2020</p>
-                    <p onClick={() => this.changeYear('2019')} className='publicationsYearListItem'>2019</p>
-                    <p onClick={() => this.changeYear('2018')} className='publicationsYearListItem'>2018</p>
-                    <p onClick={() => this.changeYear('2017')} className='publicationsYearListItem'>2017</p>
+                {this.state.dropDownOpen ? <div className='publicationsYearDropDownListBox'>
+                    <div className='publicationsYearDropDownList'>
+                        <p onClick={() => this.changeYear('2020')} className='publicationsYearListItem'>2020</p>
+                        <p onClick={() => this.changeYear('2019')} className='publicationsYearListItem'>2019</p>
+                        <p onClick={() => this.changeYear('2018')} className='publicationsYearListItem'>2018</p>
+                        <p onClick={() => this.changeYear('2017')} className='publicationsYearListItem'>2017</p>
+                    </div>
                 </div> : null}
                 <div className='publicationsColumn'>
                     {publications.map(item => <div className='publicationPageLine'>

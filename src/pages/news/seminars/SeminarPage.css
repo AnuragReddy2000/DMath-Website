@@ -2,24 +2,8 @@
     width: 100%;
     display: flex;
     flex-direction: column;
-    align-items: stretch;
-}
-
-.seminarPageHeader{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
     align-items: center;
-    background-color: rgb(250,250,250);
-    border: 1px solid rgb(170, 170, 170);
-    margin: 3px;
-    padding-left: 10px;
-    padding-right: 10px;
-    z-index: 1;
-    position: sticky;
-    top: 12vh;
-    width: 67vw;
-    box-sizing: border-box;
+    position: relative;
 }
 
 .yearDropDown{
@@ -34,14 +18,18 @@
 }
 
 @media screen and (min-width: 801px){
+    .yearDropDownListBox{
+        position: absolute;
+        z-index: 3;
+        left: 83%;
+        top: 10vh;
+    }
+
     .yearDropDownList{
+        position: fixed;
         text-align: right;
         background-color: rgb(250,250,250);
         border: 1px solid rgb(170, 170, 170);
-        position: fixed;
-        z-index: 3;
-        right: 17.2vw;
-        top: 20.5vh;
         display: flex;
         flex-direction: column;
         justify-content: flex-start;
@@ -64,6 +52,7 @@
     }
 
     .seminarPageHeader{
+        height: 10vh;
         display: flex;
         flex-direction: row;
         justify-content: space-between;
@@ -75,20 +64,20 @@
         padding-right: 10px;
         z-index: 1;
         position: sticky;
-        top: 12vh;
-        width: 65vw;
+        top: 11vh;
+        width: 99.5%;
         box-sizing: border-box;
     }
 }
 
 @media screen and (max-width: 800px){
-    .yearDropDownList{
+    .yearDropDownListBox{
         text-align: right;
         background-color: rgb(250,250,250);
         position: fixed;
         z-index: 3;
-        right: 5vw;
-        top: 19vh;
+        right: 4.9vw;
+        top: 21vh;
         padding-left: 15px;
         padding-right: 15px;
         border: 1px solid rgb(170, 170, 170);
@@ -106,7 +95,7 @@
         padding-right: 10px;
         z-index: 1;
         position: sticky;
-        top: 12vh;
+        top: 11vh;
         width: 96vw;
         box-sizing: border-box;
     }

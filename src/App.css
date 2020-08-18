@@ -43,12 +43,59 @@ body{
 @media screen and (min-width: 801px){
   .pageBody{
     position: absolute;
-    top: 11vh;
+    top: 10vh;
     z-index: 1;
     width: 100%;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+  }
+
+  .announcementButton{
+    margin-top: 2vh;
+    width: 45px;
+    height: 28vh;
+    background-color: rgb(250,250,250);
+    padding-top: 2vh;
+    padding-bottom: 5vh;
+    color: darkblue;
+    border: 1px solid rgb(216, 216, 216);
+    border-right: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    position: sticky;
+    position: -webkit-sticky;
+    top: 16vh;
+  }
+
+  .upcomingeventsButton{
+    margin-top: 2vh;
+    width: 45px;
+    height: 30vh;
+    background-color: rgb(250,250,250);
+    padding-top: 2vh;
+    padding-bottom: 5vh;
+    color: darkblue;
+    border: 1px solid rgb(216, 216, 216);
+    border-right: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    position: sticky;
+    position: -webkit-sticky;
+    top: 57vh;
+  }
+  
+  .annButtonText{
+    white-space: nowrap;
+    transform: rotate(-90deg);
+    -webkit-transform: rotate(-90deg);
+    -ms-transform: rotate(-90deg);
+    -o-transform: rotate(-90deg);
+    filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
   }
 }
 
@@ -62,5 +109,13 @@ body{
     flex-direction: row;
     justify-content: space-between;
     padding-bottom: 6.5vh;
+  }
+
+  .announcementButton{
+    display: none;
+  }
+
+  .upcomingeventsButton{
+    display: none;
   }
 }
