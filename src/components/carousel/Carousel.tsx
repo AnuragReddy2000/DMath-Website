@@ -16,18 +16,20 @@ interface CarouselState{
 class Carousel extends React.Component<CarouselProps,CarouselState>{
 
     id: any;
+    timeout: number;
 
     constructor(props: CarouselProps, state: CarouselState){
         super(props,state);
         this.state = {
             currentPic: 0
         }
-        this.id = setInterval(this.nextPic, 2500);
+        this.timeout = 5000;
+        this.id = setInterval(this.nextPic, this.timeout);
     }
 
     nextPic =():void =>{
         clearInterval(this.id);
-        this.id = setInterval(this.nextPic, 2500);
+        this.id = setInterval(this.nextPic, this.timeout);
         this.setState({
             currentPic: (this.state.currentPic === this.props.imagesNum - 1) ? 0 : this.state.currentPic + 1
         })
@@ -35,7 +37,7 @@ class Carousel extends React.Component<CarouselProps,CarouselState>{
 
     prevPic =():void =>{ 
         clearInterval(this.id);
-        this.id = setInterval(this.nextPic, 2500);
+        this.id = setInterval(this.nextPic, this.timeout);
         this.setState({
             currentPic: (this.state.currentPic === 0) ? this.props.imagesNum-1 : this.state.currentPic - 1
         })

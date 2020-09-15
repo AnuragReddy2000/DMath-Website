@@ -1,8 +1,6 @@
 import React from'react';
 import './Announcements.css';
 import {BsDot} from 'react-icons/bs';
-import {AiOutlineNotification} from 'react-icons/ai';
-import { Link } from 'react-router-dom';
 import {AiOutlineCloseSquare} from 'react-icons/ai';
 
 interface AnnouncementsProps{

@@ -1,12 +1,12 @@
 import React, { useEffect } from 'react';
 import './App.css';
-import TitleBar from './common/titleBar/TitleBar';
-import NavSlider from './common/navSlider/NavSlider';
-import Announcements from './common/announcements/Announcements';
+import TitleBar from './components/titleBar/TitleBar';
+import NavSlider from './components/navSlider/NavSlider';
+import Announcements from './components/announcements/Announcements';
 import {Swipeable} from 'react-swipeable';
 import { Switch, Route} from 'react-router-dom';
 import HomePage from './pages/homePage/HomePage';
-import Marquee from './common/marquee/Marquee';
+import Marquee from './components/marquee/Marquee';
 import StaffPage from './pages/people/staffPage/StaffPage';
 import BtechMnCPage from './pages/academics/btechMnCPage/BtechMnCPage';
 import FacultyPage from './pages/people/facultyPage/FacultyPage';
@@ -141,7 +141,7 @@ class App extends React.Component<AppProps, AppState> {
             {this.state.showAnnouncements ? <Announcements changeTab={this.changeTab} hideAnnouncements={this.toggleShowAnnouncements} /> : 
             <div>
               <div className='announcementButton' onClick={this.toggleShowAnnouncements}>
-                <BsCaretLeftFill/>
+                <BsCaretLeftFill className='annOpenIcon'/>
                 <p className='annButtonText'>ANNOUNCEMENTS</p>
               </div>
               <div className='upcomingeventsButton' onClick={this.toggleShowAnnouncements}>

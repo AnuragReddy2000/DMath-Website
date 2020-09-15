@@ -1,6 +1,6 @@
 import React from 'react';
 import {FundedProjectsList} from '../../../models/FundedProjectsList';
-import TableView from '../../../common/tableView/TableView';
+import TableView from '../../../components/tableView/TableView';
 import './FundedProjectsPage.css';
 
 class FundedProjectsPage extends React.Component{

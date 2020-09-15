@@ -43,10 +43,11 @@ class NavSlider extends React.Component<NavSliderProps, NavSliderState>{
                     <NavTab name='Home' onClickEvent={this.home} currentTab={this.props.currentTab} urlLink='/' icon={AiOutlineHome} pageType='component'/>
                     {DropDownList.map((value,index) =>  <DropDownTab key={index} name={value.title} currentTab={this.props.currentTab} icon={value.icon} currentDropdown={this.state.currentDropDown} onClickEvent={this.props.changeTab} dropDownUpdate={this.changeDropDownTab} contentTabs={value.subTitles}/>)} 
                     <div className='contactUs'>
-                        <Link to='/contactUs' style={{textDecoration: 'none', color: 'inherit'}}><p style={{marginRight: '4px'}}>Contact Us </p></Link>
-                        <p style={{marginRight: '4px'}}> <a href='https://www.iith.ac.in/' style={{textDecoration: 'none', color: 'inherit'}} target='_blank'>IITH Home</a></p>
-                        <Link to='/credits' style={{textDecoration: 'none', color: 'inherit'}}><p style={{marginRight: '4px'}}>Credits</p></Link>
-                        <a href='https://www.facebook.com/iithmathematicsdepartment/' style={{textDecoration: 'none', color: 'inherit'}} target='_blank'><FaFacebookSquare size={32} color={'#3b5998'} style={{marginRight: '4px'}}/></a>
+                        <div style={{display: 'flex', flexDirection: 'row', justifyContent: 'space-between', width: '100%'}}>
+                            <Link to='/contactUs' style={{textDecoration: 'none', color: 'inherit'}}><p style={{ marginBottom: '3px', alignSelf: 'flex-start'}}>Contact Us </p></Link>
+                            <Link to='/credits' style={{textDecoration: 'none', color: 'inherit'}}><p style={{marginBottom: '3px', alignSelf: 'flex-end'}}>Credits</p></Link>
+                        </div>
+                        <p style={{ marginBottom: '3px'}}> <a href='https://www.iith.ac.in/' style={{textDecoration: 'none', color: 'inherit'}} target='_blank'>IITH Home</a></p>
                     </div>   
                 </div>
             </div>

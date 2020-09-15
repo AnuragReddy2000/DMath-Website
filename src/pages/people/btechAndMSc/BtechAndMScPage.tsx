@@ -1,7 +1,7 @@
 import React from 'react';
 import {BtechAndMScStudents} from '../../../models/BtechAndMScStudents';
 import './BtechAndMScPage.css';
-import Carousel from '../../../common/carousel/Carousel';
+import Carousel from '../../../components/carousel/Carousel';
 import {BsDot} from 'react-icons/bs';
 
 class BtechAndMScPage extends React.Component{

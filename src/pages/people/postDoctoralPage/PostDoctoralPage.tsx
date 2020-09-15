@@ -1,6 +1,6 @@
 import React from 'react';
 import {FormerPostDoctoralList, PostDoctoralList} from '../../../models/PostDoctoralList';
-import ProfileView from '../../../common/profileView/ProfileView';
+import ProfileView from '../../../components/profileView/ProfileView';
 import './PostDoctoralPage.css';
 
 class PostDoctoralPage extends React.Component{

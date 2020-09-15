@@ -1,5 +1,5 @@
 import React from 'react';
-import ProfileView from '../../../common/profileView/ProfileView';
+import ProfileView from '../../../components/profileView/ProfileView';
 import {DoctoralList} from '../../../models/DoctoralList';
 import './DoctoralPage.css';
 

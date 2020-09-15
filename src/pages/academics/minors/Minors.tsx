@@ -1,9 +1,9 @@
 import React from 'react';
-import Carousel from '../../../common/carousel/Carousel';
-import InfoView from '../../../common/infoView/InfoView';
+import Carousel from '../../../components/carousel/Carousel';
+import InfoView from '../../../components/infoView/InfoView';
 import {CarouselPics} from '../../../models/CarouselPics';
 import {MinorsCourses} from '../../../models/MinorsCourses';
-import TableView from '../../../common/tableView/TableView';
+import TableView from '../../../components/tableView/TableView';
 
 class Minors extends React.Component{
 

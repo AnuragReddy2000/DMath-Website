@@ -1,5 +1,5 @@
 import React from 'react';
-import InfoView from '../../../common/infoView/InfoView';
+import InfoView from '../../../components/infoView/InfoView';
 import './PhDAdmissions.css';
 
 class PhDAdmissions extends React.Component{

@@ -1,12 +1,13 @@
 .marquee{
     width: 100%;
-    line-height: 2.5vh;
+    height: 5vh;
+    line-height: 2vh;
     background-color: rgb(250,250,250);
     color: darkblue;
     white-space: nowrap;
     overflow: hidden;
     box-sizing: border-box;                                                                                                                                                                                                                                                
-    top: 93.5vh;
+    top: 95vh;
     z-index: 1;
     position: sticky;
     position: -webkit-sticky;

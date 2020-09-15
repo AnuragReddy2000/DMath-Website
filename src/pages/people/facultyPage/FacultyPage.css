@@ -13,7 +13,7 @@
       margin-top: 1vh;
       display: grid;
       width: 100%;
-      grid-template-columns: 49% 49%;
+      grid-template-columns: 98%;
       row-gap: 2vh;
       justify-content: space-between;
     }

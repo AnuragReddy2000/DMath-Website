@@ -20,7 +20,7 @@ class ProfileView extends React.Component<ProfileViewProps>{
         return(
             <div className='profileView'>
                 <div className='profileViewImageWrap'>
-                    <img  className='profileViewImage' src={this.props.Image} width='85%'/>
+                    <img  className='profileViewImage' src={this.props.Image} width='100%'/>
                 </div>
                 <div className='profileInfo'>
                     <p className='profileViewName'>{this.props.Name}</p>

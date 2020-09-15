@@ -1,6 +1,6 @@
 import React from 'react';
 import {Seminars} from '../../../models/Seminars';
-import TableView from '../../../common/tableView/TableView';
+import TableView from '../../../components/tableView/TableView';
 import './SeminarPage.css';
 import {AiFillCaretDown} from 'react-icons/ai';
 

@@ -1,5 +1,5 @@
 import React from 'react';
-import InfoView from '../../../common/infoView/InfoView';
+import InfoView from '../../../components/infoView/InfoView';
 
 class SummerInternships extends React.Component{
 

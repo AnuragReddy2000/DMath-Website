@@ -1,8 +1,8 @@
 import React from 'react';
 import {PhDAlumniList} from '../../../models/AlumniList';
 import {MScAlumniList} from '../../../models/AlumniList';
-import ProfileView from '../../../common/profileView/ProfileView';
-import Carousel from '../../../common/carousel/Carousel';
+import ProfileView from '../../../components/profileView/ProfileView';
+import Carousel from '../../../components/carousel/Carousel';
 import {BsDot} from 'react-icons/bs';
 import './AlumniPage.css';
 

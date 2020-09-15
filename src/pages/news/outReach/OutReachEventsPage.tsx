@@ -1,6 +1,6 @@
 import React from 'react';
-import InfoView from '../../../common/infoView/InfoView';
-import Carousel from '../../../common/carousel/Carousel';
+import InfoView from '../../../components/infoView/InfoView';
+import Carousel from '../../../components/carousel/Carousel';
 import {CarouselPics} from '../../../models/CarouselPics';
 
 class OutReachEventsPage extends React.Component{

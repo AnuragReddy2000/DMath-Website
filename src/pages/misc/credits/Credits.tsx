@@ -1,6 +1,6 @@
 import React from 'react';
-import Carousel from '../../../common/carousel/Carousel';
-import InfoView from '../../../common/infoView/InfoView';
+import Carousel from '../../../components/carousel/Carousel';
+import InfoView from '../../../components/infoView/InfoView';
 import applaud from '../../../images/misc/applaud.png';
 import './Credits.css';
 import { BsDot } from 'react-icons/bs';
